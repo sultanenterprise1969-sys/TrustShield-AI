@@ -1,0 +1,14 @@
+# Full install (dashboard + API + tests). Python 3.10+; developed on 3.12.
+streamlit>=1.40
+fastapi>=0.110
+uvicorn>=0.29
+python-multipart>=0.0.9
+pandas>=2.0
+numpy>=1.26
+scikit-learn>=1.4
+joblib>=1.3
+Pillow>=10.1
+pytesseract>=0.3.10
+python-dotenv>=1.0
+pytest>=8.0
+httpx>=0.27

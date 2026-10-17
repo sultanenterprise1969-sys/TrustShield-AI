@@ -1,0 +1,16 @@
+# Optional: the FastAPI backend (same install steps as trustshield.service).
+[Unit]
+Description=TrustShield AI API
+After=network.target
+
+[Service]
+User=linux1
+WorkingDirectory=/home/linux1/trustshield
+EnvironmentFile=-/home/linux1/trustshield/.env
+ExecStart=/home/linux1/trustshield/venv/bin/uvicorn api:app --host 127.0.0.1 --port 8000
+Restart=on-failure
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
